@@ -2,8 +2,8 @@ import { createClient } from '@supabase/supabase-js'
 
 // ⚠️ REPLACE THESE WITH YOUR SUPABASE CREDENTIALS
 // Found in: Supabase Dashboard → Settings → API
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://YOUR_PROJECT.supabase.co'
-const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY || 'YOUR_ANON_KEY'
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://nzxifezbmsxlhfknfiat.supabase.co'
+const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56eGlmZXpibXN4bGhma25maWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAxMTc5ODgsImV4cCI6MjA5NTY5Mzk4OH0.iEeQCZI4qKcf9WLN07O5cZRmJK3HUkQUMnVCEiUMyJc'
 
 export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
   auth: {
