@@ -1,0 +1,19 @@
+name: Extract and Setup
+on: [push]
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Extract zip
+        run: |
+          unzip SomazBet-complete.zip -d .
+          cp -r somazbet/* .
+          rm -rf somazbet SomazBet-complete.zip
+      - name: Commit extracted files
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add .
+          git commit -m "Extract project files" || echo "Nothing to commit"
+          git push
